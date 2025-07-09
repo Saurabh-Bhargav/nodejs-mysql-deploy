@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-mysql-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-mysql-app
+  template:
+    metadata:
+      labels:
+        app: node-mysql-app
+    spec:
+      containers:
+        - name: node-mysql-app
+          image: ghcr.io/appwrktesting/node-mysql:v1
+          ports:
+            - containerPort: 5000
