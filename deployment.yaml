@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: node-mysql-app
-          image: ghcr.io/appwrktesting/node-mysql:v1
+          image: ghcr.io/appwrktesting/node-mysql:v2
           ports:
             - containerPort: 5000
